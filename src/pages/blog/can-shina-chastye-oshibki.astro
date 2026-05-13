@@ -1,0 +1,23 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Размышления на тему стать автоэлектриком">
+  
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <a href="/blog" style="color:#3b82f6;text-decoration:none;font-size:13px">← Назад к блогу</a>
+    <h1 style="margin-top:16px">Размышления на тему стать автоэлектриком</h1>
+    <p style="color:#6b7280">10 февраля 2024</p>
+  </div>
+
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:16px">Ошибка 1: Не смотрят осциллографом</h2>
+    <p>Мультиметр показывает среднее 2.5V — всё вроде нормально. А осциллографом видно что сигнал зашумлён или один из проводов плавает. Без осциллографа диагностика CAN — гадание.</p>
+  </div>
+
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px">
+    <h2 style="margin-bottom:16px">Ошибка 2: Не проверяют терминальные резисторы</h2>
+    <p>На CAN-шине должно быть 60 Ом между CAN-H и CAN-L при выключенном зажигании. Если 120 Ом — обрыв одного резистора. Если 0 Ом — короткое замыкание между линиями.</p>
+  </div>
+
+</Layout>

@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Максим — автоэлектрик, ремонт блоков управления">
+  
+  <!-- О себе -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <div style="display:flex;align-items:flex-start;gap:24px;flex-wrap:wrap">
+      <div style="width:80px;height:80px;border-radius:20px;background:#1a1e2b;display:flex;align-items:center;justify-content:center;font-size:34px;flex-shrink:0">🔧</div>
+      <div>
+        <h1 style="margin-bottom:8px">Автоэлектрик Максим</h1>
+        <p>Занимаюсь дигностикой и ремонтом электрооборудования грузового транспорта и спецтехники. Ремонтирую автомобильные блоки управления — ДВС, ABS, SRS, панели приборов. Чип-тюнинг, отключение экологии, снятие ограничений, работа с CAN-шиной. Занимаюсь этим каждый день.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Услуги -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:20px">Что я делаю</h2>
+    <div class="grid-3">
+      <div style="padding-right:12px">
+        <h3><img src="/icons/ecu.png" alt="" style="width:40px;height:40px;display:inline-block;vertical-align:middle">&nbsp;&nbsp;&nbsp; Ремонт блоков</h3>
+        <p>Ремонтирую и восстанавливаю блоки управления для различных систем автомобиля. Имею в арсенале большой опыт и различный ассортимент оборудования. Занимаюсь пайкой BGA, произвожу замену процессоров, восстановление после воды и КЗ.</p>
+      </div>
+      <div style="padding-right:12px">
+        <h3><img src="/icons/chip.png" alt="" style="width:40px;height:40px;display:inline-block;vertical-align:middle">&nbsp;&nbsp;&nbsp;Чип-тюнинг</h3>
+        <p>Отключение AdBlue, EGR, сажевого фильтра, увеличение мощности. Работаю только с проверенными и ответственными калибровщиками и проверенным оборудованием.</p>
+      </div>
+      <div style="padding-right:12px">
+        <h3><img src="/icons/android.png" alt="" style="width:40px;height:40px;display:inline-block;vertical-align:middle">&nbsp;&nbsp;&nbsp;Отладочные платы</h3>
+        <p>Произвожу и продаю платы для работы с CAN, K-Line, диагностическим оборудованием.</p>
+      </div>
+      <div style="padding-right:12px">
+        <h3><img src="/icons/pc.png" alt="" style="width:40px;height:40px;display:inline-block;vertical-align:middle">&nbsp;&nbsp;&nbsp; Диагностика и ремонт</h3>
+        <p>Занимаюсь диагностикой и ремонтом различных систем грузового транспорта. Параметрирую блоки, прописываю ключи.  </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Товары -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:20px">Блоки в наличии</h2>
+    <div class="grid-3">
+      <div>
+        <span class="badge badge-green">В наличии</span>
+        <h3>ЭБУ CUMMINS CM2220</h3>
+        <p>🚗 Gazel Next</p>
+        <p>Снят с исправного автомобиля. Проверен на машине.</p>
+        <span class="price">17 500 ₽</span>
+        <a class="btn" href="https://t.me/your_telegram">Заказать</a>
+      </div>
+      <div>
+        <span class="badge badge-green">В наличии</span>
+        <h3>ABS Teves Mk60</h3>
+        <p>🚗 VW Golf 5 / Passat B6</p>
+        <p>Переборка гидроблока, проверка на стенде.</p>
+        <span class="price">12 000 ₽</span>
+        <a class="btn" href="https://t.me/your_telegram">Заказать</a>
+      </div>
+      <div>
+        <span class="badge badge-green">В наличии</span>
+        <h3>Панель VDO</h3>
+        <p>🚗 Renault Logan / Sandero</p>
+        <p>Коррекция одометра, замена подсветки.</p>
+        <span class="price">4 500 ₽</span>
+        <a class="btn" href="https://t.me/your_telegram">Заказать</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Как работаю -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:20px">Как я работаю</h2>
+    <ul class="steps">
+      <li><span class="step-num">1</span> Пишете мне в Telegram, описываете проблему</li>
+      <li><span class="step-num">2</span> Я говорю берусь или нет, и примерную цену</li>
+      <li><span class="step-num">3</span> Привозите или отправляете блок СДЭК</li>
+      <li><span class="step-num">4</span> Диагностика 1-3 дня, точная стоимость</li>
+      <li><span class="step-num">5</span> Ремонт, проверка на столе или машине</li>
+      <li><span class="step-num">6</span> Отправляю обратно. Гарантия от 3 месяцев</li>
+    </ul>
+  </div>
+
+  <!-- Контакты -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:20px">Связаться</h2>
+    <div class="contact-row">
+      <a href="https://t.me/your_telegram" class="contact-link">📱 Telegram: @your_telegram</a>
+      <a href="https://wa.me/79991234567" class="contact-link">💬 WhatsApp</a>
+      <a href="mailto:auto@example.com" class="contact-link">📧 Почта</a>
+    </div>
+  </div>
+
+</Layout>

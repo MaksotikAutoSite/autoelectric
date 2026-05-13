@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Блог">
+  
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h1 style="margin-bottom:8px">Блог</h1>
+    <p>Заметки о ремонте, диагностике и автомобильной электронике.</p>
+  </div>
+
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <div style="display:flex;flex-direction:column;gap:2px">
+      
+      <a href="/blog/kak-ya-remontiruyu-ebu" style="display:block;padding:18px 0;border-bottom:1px solid #1a1e2b;text-decoration:none">
+        <h3 style="color:#e1e6ed;margin-bottom:4px">Изиенение пробега и моточасов в комбинациях приборов Итэлма 74.3801010-01 Элара 69.3801</h3>
+        <p style="color:#6b7280;font-size:13px;margin-bottom:4px">9 май 2026</p>
+        <p style="color:#6b7280;font-size:13px">Рассказываю как я оказываю данную услугу и с помощью чего произвожу корректировку одометра.</p>
+      </a>
+
+      <a href="/blog/can-shina-chastye-oshibki" style="display:block;padding:18px 0;border-bottom:1px solid #1a1e2b;text-decoration:none">
+        <h3 style="color:#e1e6ed;margin-bottom:4px">CAN-шина: частые ошибки при диагностике</h3>
+        <p style="color:#6b7280;font-size:13px;margin-bottom:4px">10 февраля 2024</p>
+        <p style="color:#6b7280;font-size:13px">Разбираем типичные неисправности CAN-шины.</p>
+      </a>
+
+      <a href="/blog/zamena-processora-ebu" style="display:block;padding:18px 0;text-decoration:none">
+        <h3 style="color:#e1e6ed;margin-bottom:4px">Уработка процессора на ЭБУ — пошагово</h3>
+        <p style="color:#6b7280;font-size:13px;margin-bottom:4px">5 марта 2024</p>
+        <p style="color:#6b7280;font-size:13px">Пайка BGA, прогрев платы, проверка после замены.</p>
+      </a>
+
+    </div>
+  </div>
+
+</Layout>

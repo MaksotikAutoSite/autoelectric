@@ -1,0 +1,57 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="База знаний">
+  
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h1 style="margin-bottom:8px">База знаний</h1>
+    <p>Техническая информация: распиновки, дампы, схемы, ошибки. То что накопилось за годы работы. Каждая статья — отдельная страница, можно скинуть ссылкой клиенту.</p>
+  </div>
+
+  <!-- Раздел: Техническая Документация -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:16px">📌 Техническая документация</h2>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="/wiki/shacman" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #1a1e2b;text-decoration:none;color:#b0b8c4;font-size:14px">
+        <span>SHACMAN - Техническая документация</span>
+        <span style="color:#3b82f6">→</span>
+      </a>
+      <a href="/wiki/ecu-bosch-me17" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #1a1e2b;text-decoration:none;color:#b0b8c4;font-size:14px">
+        <span>SITRAK - Техническая документация</span>
+        <span style="color:#3b82f6">→</span>
+      </a>
+      <a href="/wiki/abs-teves" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;text-decoration:none;color:#b0b8c4;font-size:14px">
+        <span>KAMAZ - Техническая документация</span>
+        <span style="color:#3b82f6">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Раздел: Коды ошибок -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:16px">⚠️ Коды ошибок</h2>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="/wiki/error-p0420" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #1a1e2b;text-decoration:none;color:#b0b8c4;font-size:14px">
+        <span>P0420 — низкая эффективность катализатора</span>
+        <span style="color:#3b82f6">→</span>
+      </a>
+      <a href="/wiki/error-p0601" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;text-decoration:none;color:#b0b8c4;font-size:14px">
+        <span>P0601 — ошибка контрольной суммы ЭБУ</span>
+        <span style="color:#3b82f6">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Раздел: Дампы и прошивки -->
+  <div style="background:#11141c;border:1px solid #1a1e2b;border-radius:16px;padding:32px;margin-bottom:24px">
+    <h2 style="margin-bottom:16px">💾 Дампы и прошивки</h2>
+    <div style="display:flex;flex-direction:column;gap:2px">
+      <a href="/wiki/dump-vesta-euro2" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;text-decoration:none;color:#b0b8c4;font-size:14px">
+        <span>Lada Vesta — прошивка Евро-2</span>
+        <span style="color:#3b82f6">→</span>
+      </a>
+    </div>
+  </div>
+
+</Layout>

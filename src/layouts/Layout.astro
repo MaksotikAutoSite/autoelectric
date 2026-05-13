@@ -1,0 +1,247 @@
+---
+const { title = 'Автоэлектрик - ремонт блоков' } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { overflow-x: hidden; scroll-behavior: smooth; }
+    body { 
+      background: #0b0d14; 
+      color: #b0b8c4; 
+      font-family: 'Inter', Arial, sans-serif; 
+      min-height: 100vh; 
+      display: flex; 
+      flex-direction: column; 
+      line-height: 1.6; 
+      max-width: 100vw; 
+      overflow-x: hidden; 
+      font-size: 15px;
+    }
+
+    /* Шапка */
+    header { 
+      border-bottom: 1px solid #1a1e2b; 
+      padding: 0 20px; 
+      background: rgba(11,13,20,0.95);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav { 
+      max-width: 960px; 
+      margin: 0 auto; 
+      height: 64px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+    }
+    nav .brand { 
+      font-size: 18px; 
+      font-weight: 700; 
+      color: #e1e6ed; 
+      text-decoration: none;
+    }
+    nav .brand span { color: #3b82f6; }
+    nav .links { display: flex; gap: 28px; }
+    nav .links a { 
+      color: #6b7280; 
+      text-decoration: none; 
+      font-size: 14px; 
+      font-weight: 500;
+      transition: color 0.2s; 
+    }
+    nav .links a:hover { color: #e1e6ed; }
+
+    /* Основной контент */
+    main { 
+      flex: 1; 
+      max-width: 960px; 
+      width: 100%; 
+      margin: 0 auto; 
+      padding: 48px 20px; 
+    }
+
+    /* Подвал */
+    footer { 
+      border-top: 1px solid #1a1e2b; 
+      text-align: center; 
+      padding: 24px 20px; 
+      color: #374151; 
+      font-size: 13px; 
+    }
+
+    /* Секции */
+    .section { margin-bottom: 64px; }
+    .section-header { 
+      display: flex; 
+      align-items: center; 
+      gap: 12px; 
+      margin-bottom: 24px; 
+    }
+    .section-header h2 { 
+      font-size: 20px; 
+      font-weight: 600; 
+      color: #e1e6ed; 
+    }
+    .section-line { 
+      flex: 1; 
+      height: 1px; 
+      background: #1a1e2b; 
+    }
+
+    /* Заголовки */
+    h1 { font-size: 36px; font-weight: 700; color: #e1e6ed; margin-bottom: 12px; letter-spacing: -0.5px; }
+    h3 { font-size: 16px; font-weight: 600; color: #e1e6ed; margin-bottom: 6px; }
+
+    /* Текст */
+    p { color: #6b7280; font-size: 14px; line-height: 1.7; }
+
+    /* Кнопка */
+    .btn { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 6px;
+      background: #3b82f6; 
+      color: #fff; 
+      padding: 10px 20px; 
+      border-radius: 8px; 
+      text-decoration: none; 
+      font-weight: 600; 
+      font-size: 13px; 
+      transition: all 0.2s; 
+    }
+    .btn:hover { background: #2563eb; transform: translateY(-1px); }
+
+    /* Карточка */
+    .card { 
+      background: #11141c; 
+      border: 1px solid #1a1e2b; 
+      border-radius: 12px; 
+      padding: 24px; 
+      transition: border-color 0.2s;
+    }
+    .card:hover { border-color: #2d3548; }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: #6b7280; font-size: 13px; margin-bottom: 10px; }
+
+    /* Сетка */
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    @media (min-width: 640px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+      .grid-3 { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      .grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    /* Цена */
+    .price { font-size: 20px; font-weight: 700; color: #3b82f6; display: block; margin: 10px 0; }
+
+    /* Статусы */
+    .badge { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; margin-bottom: 8px; }
+    .badge-green { background: #064e3b30; color: #34d399; }
+    .badge-gray { background: #37415130; color: #6b7280; }
+
+    /* Блок "Кто я" */
+    .hero { display: flex; align-items: flex-start; gap: 28px; margin-bottom: 64px; }
+    .hero-avatar { 
+      width: 88px; 
+      height: 88px; 
+      border-radius: 24px; 
+      background: #11141c; 
+      border: 1px solid #1a1e2b;
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-size: 36px; 
+      flex-shrink: 0; 
+    }
+    .hero-text p { font-size: 15px; color: #6b7280; max-width: 500px; }
+
+    /* Список шагов */
+    .steps { list-style: none; }
+    .steps li { 
+      display: flex; 
+      gap: 14px; 
+      padding: 14px 0; 
+      border-bottom: 1px solid #1a1e2b; 
+      font-size: 14px; 
+      color: #b0b8c4;
+    }
+    .steps li:last-child { border-bottom: none; }
+    .step-num { 
+      width: 28px; 
+      height: 28px; 
+      background: #1a1e2b; 
+      border-radius: 8px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      font-weight: 700; 
+      font-size: 13px; 
+      flex-shrink: 0;
+      color: #3b82f6;
+    }
+
+    /* Контакты */
+    .contact-row { 
+      display: flex; 
+      gap: 8px; 
+      flex-wrap: wrap; 
+    }
+    .contact-link { 
+      background: #11141c; 
+      border: 1px solid #1a1e2b; 
+      border-radius: 10px; 
+      padding: 14px 20px; 
+      text-decoration: none; 
+      color: #b0b8c4; 
+      font-size: 14px; 
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .contact-link:hover { border-color: #3b82f6; color: #e1e6ed; }
+
+    /* Мобильное меню */
+    @media (max-width: 600px) {
+      h1 { font-size: 26px; }
+      .hero { flex-direction: column; align-items: flex-start; gap: 18px; }
+      nav .links { gap: 16px; }
+      nav .links a { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="brand"><span>⚡</span> AutoElectric</a>
+      <div class="links">
+        <a href="/">Главная</a>
+        <a href="/blog">Блог</a>
+        <a href="/products">Товары</a>
+        <a href="/wiki">Wiki</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <slot />
+  </main>
+  <footer>
+    © {new Date().getFullYear()} Максим — автоэлектрик
+  </footer>
+</body>
+</html>
